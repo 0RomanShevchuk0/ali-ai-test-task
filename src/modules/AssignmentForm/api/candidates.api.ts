@@ -1,6 +1,6 @@
 import { axiosClassic } from "@/shared/api/client"
-import { AssignmentFormData, SumbitAssignmentResponse } from "../types/assignment"
-import { LevelsResponse } from "../types/candidate"
+import { Assignment, SumbitAssignmentResponse } from "@/shared/types/assignment"
+import { LevelsResponse } from "@/shared/types/candidate"
 
 class CandidateApi {
   private baseUrl = "tools/candidates"
@@ -10,7 +10,7 @@ class CandidateApi {
     return res.data
   }
 
-  async submitAssignment(body: AssignmentFormData): Promise<SumbitAssignmentResponse> {
+  async submitAssignment(body: Assignment): Promise<SumbitAssignmentResponse> {
     const response = await axiosClassic.post<SumbitAssignmentResponse>(
       `${this.baseUrl}/assignments`,
       body

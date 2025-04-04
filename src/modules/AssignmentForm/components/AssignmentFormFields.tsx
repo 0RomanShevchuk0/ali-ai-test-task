@@ -3,12 +3,12 @@ import Input from "@/ui/Input"
 import Select from "@/ui/Select"
 import Button from "@/ui/Button"
 import { FieldErrors, UseFormRegister } from "react-hook-form"
-import { AssignmentFormData } from "../types/assignment"
+import { Assignment } from "@/shared/types/assignment"
 import { Option } from "@/shared/utils/convert-to-options"
 
 type Props = {
-  register: UseFormRegister<AssignmentFormData>
-  errors: FieldErrors<AssignmentFormData>
+  register: UseFormRegister<Assignment>
+  errors: FieldErrors<Assignment>
   levelsOptions: Option[]
   isSubmitting?: boolean
 }

@@ -1,7 +1,7 @@
 import { ResponseStatus } from "@/shared/types/response"
 import { CandidateLevel } from "./candidate"
 
-export interface AssignmentFormData {
+export interface Assignment {
   name: string
   email: string
   assignment_description: string
@@ -10,7 +10,7 @@ export interface AssignmentFormData {
 }
 
 export interface SumbitAssignmentResponse {
-  data: AssignmentFormData
+  data: Assignment
   message: string
   status: ResponseStatus
 }

@@ -1,11 +1,11 @@
 import { useMutation } from "@tanstack/react-query"
-import { AssignmentFormData } from "../types/assignment"
+import { Assignment } from "../../../shared/types/assignment"
 import { candidateApi } from "@/modules/AssignmentForm/api/candidates.api"
 import toast from "react-hot-toast"
 
 export function useSubmitAssignment() {
   return useMutation({
-    mutationFn: (data: AssignmentFormData) => candidateApi.submitAssignment(data),
+    mutationFn: (data: Assignment) => candidateApi.submitAssignment(data),
     onSuccess: async () => {
       toast.success("Assignment submitted successfully!")
     },

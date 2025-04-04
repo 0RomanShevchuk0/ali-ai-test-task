@@ -1,3 +1,3 @@
-export const appQueries = {
-  candidateLevels: "candidateLevels",
+export const AppQueries = {
+  CANDIDATE_LEVELS: "candidateLevels",
 }
