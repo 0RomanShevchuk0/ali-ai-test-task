@@ -1,14 +1,12 @@
 import clsx from "clsx"
-import { FC, InputHTMLAttributes } from "react"
+import { SelectHTMLAttributes } from "react"
 
-interface SelectProps extends InputHTMLAttributes<HTMLSelectElement> {}
-
-const Select: FC<SelectProps> = ({ className, children, ...props }) => {
+const Select = ({ className, children, ...props }: SelectHTMLAttributes<HTMLSelectElement>) => {
   return (
     <select
       {...props}
       className={clsx(
-        "border rounded-md px-2 py-1 w-full",
+        "border rounded-md px-2 py-1",
         !className?.includes("w-") && "w-full",
         className
       )}
